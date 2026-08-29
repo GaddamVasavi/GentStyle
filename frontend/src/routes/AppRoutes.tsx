@@ -7,8 +7,13 @@ import { HomePage } from '../pages/public/HomePage';
 import { LoginPage } from '../pages/public/LoginPage';
 import { RegisterPage } from '../pages/public/RegisterPage';
 import { ForgotPasswordPage } from '../pages/public/ForgotPasswordPage';
+import { ShopPage } from '../pages/public/ShopPage';
+import { ProductDetailsPage } from '../pages/public/ProductDetailsPage';
+import { CategoriesPage } from '../pages/public/CategoriesPage';
+import { CollectionsPage } from '../pages/public/CollectionsPage';
 import { ProfilePage } from '../pages/customer/ProfilePage';
 import { AddressesPage } from '../pages/customer/AddressesPage';
+import { WishlistPage } from '../pages/customer/WishlistPage';
 import { AdminDashboardPage } from '../pages/admin/AdminDashboardPage';
 
 export const AppRoutes: React.FC = () => {
@@ -17,6 +22,12 @@ export const AppRoutes: React.FC = () => {
       {/* Public Storefront Layout */}
       <Route element={<MainLayout />}>
         <Route path="/" element={<HomePage />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/products/:slug" element={<ProductDetailsPage />} />
+        <Route path="/categories" element={<CategoriesPage />} />
+        <Route path="/categories/:slug" element={<ShopPage />} />
+        <Route path="/collections" element={<CollectionsPage />} />
+        <Route path="/collections/:slug" element={<ShopPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
@@ -26,17 +37,14 @@ export const AppRoutes: React.FC = () => {
           <Route index element={<Navigate to="/customer/profile" replace />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="addresses" element={<AddressesPage />} />
+          <Route path="wishlist" element={<WishlistPage />} />
           <Route path="orders" element={<div className="text-center py-12 text-gray-400">Order management will be active in Phase 4.</div>} />
-          <Route path="wishlist" element={<div className="text-center py-12 text-gray-400">Saved Wishlist will be active in Phase 3.</div>} />
           <Route path="notifications" element={<div className="text-center py-12 text-gray-400">Notification center ready.</div>} />
         </Route>
 
         {/* Placeholder store routes */}
-        <Route path="/shop" element={<div className="py-20 text-center text-gray-400">Catalog active in Phase 2 & 3.</div>} />
-        <Route path="/categories/:slug" element={<div className="py-20 text-center text-gray-400">Category Catalog active in Phase 2.</div>} />
-        <Route path="/collections" element={<div className="py-20 text-center text-gray-400">Collections active in Phase 2.</div>} />
-        <Route path="/collections/:slug" element={<div className="py-20 text-center text-gray-400">Collection Lookbook active in Phase 2.</div>} />
         <Route path="/cart" element={<div className="py-20 text-center text-gray-400">Cart active in Phase 4.</div>} />
+        <Route path="/checkout" element={<div className="py-20 text-center text-gray-400">Checkout active in Phase 4.</div>} />
       </Route>
 
       {/* Protected Admin Executive Console */}
