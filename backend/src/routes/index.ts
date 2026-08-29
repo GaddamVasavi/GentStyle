@@ -16,6 +16,10 @@ import { bespokeRoutes } from '../modules/bespoke/bespoke.routes';
 import { warehouseRoutes } from '../modules/warehouse/warehouse.routes';
 import { procurementRoutes } from '../modules/procurement/procurement.routes';
 import { logisticsRoutes } from '../modules/logistics/logistics.routes';
+import { loyaltyRoutes } from '../modules/loyalty/loyalty.routes';
+import { crmRoutes } from '../modules/crm/crm.routes';
+import { analyticsRoutes } from '../modules/analytics/analytics.routes';
+import { aiStylistRoutes } from '../modules/ai_stylist/aiStylist.routes';
 import { sendSuccess } from '../utils/response';
 
 const router = Router();
@@ -53,5 +57,9 @@ router.use('/bespoke', bespokeRoutes);
 router.use('/warehouse', warehouseRoutes);
 router.use('/procurement', procurementRoutes);
 router.use('/logistics', logisticsRoutes);
+router.use('/loyalty', loyaltyRoutes);
+router.use('/crm', crmRoutes);
+router.use('/analytics', analyticsRoutes);
+router.use('/stylist', aiStylistRoutes);
 
 export const apiRouter = router;

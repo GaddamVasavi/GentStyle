@@ -7,6 +7,7 @@ import cartReducer from './slices/cartSlice';
 import orderReducer from './slices/orderSlice';
 import bespokeReducer from './slices/bespokeSlice';
 import supplyChainReducer from './slices/supplyChainSlice';
+import crmAnalyticsReducer from './slices/crmAnalyticsSlice';
 
 export const store = configureStore({
   reducer: {
@@ -18,6 +19,7 @@ export const store = configureStore({
     orders: orderReducer,
     bespoke: bespokeReducer,
     supplyChain: supplyChainReducer,
+    crmAnalytics: crmAnalyticsReducer,
   },
   devTools: import.meta.env.DEV,
 });
