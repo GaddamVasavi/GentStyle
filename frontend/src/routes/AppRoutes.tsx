@@ -19,6 +19,9 @@ import { WishlistPage } from '../pages/customer/WishlistPage';
 import { OrdersPage } from '../pages/customer/OrdersPage';
 import { OrderDetailsPage } from '../pages/customer/OrderDetailsPage';
 import { AdminDashboardPage } from '../pages/admin/AdminDashboardPage';
+import { BespokeCustomizerPage } from '../pages/bespoke/BespokeCustomizerPage';
+import { MeasurementStudioPage } from '../pages/bespoke/MeasurementStudioPage';
+import { TailorFittingBookingPage } from '../pages/bespoke/TailorFittingBookingPage';
 
 export const AppRoutes: React.FC = () => {
   return (
@@ -34,6 +37,9 @@ export const AppRoutes: React.FC = () => {
         <Route path="/collections/:slug" element={<ShopPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/bespoke" element={<BespokeCustomizerPage />} />
+        <Route path="/bespoke/measurements" element={<MeasurementStudioPage />} />
+        <Route path="/bespoke/appointments" element={<TailorFittingBookingPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />

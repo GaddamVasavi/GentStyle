@@ -5,6 +5,7 @@ import productReducer from './slices/productSlice';
 import wishlistReducer from './slices/wishlistSlice';
 import cartReducer from './slices/cartSlice';
 import orderReducer from './slices/orderSlice';
+import bespokeReducer from './slices/bespokeSlice';
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     wishlist: wishlistReducer,
     cart: cartReducer,
     orders: orderReducer,
+    bespoke: bespokeReducer,
   },
   devTools: import.meta.env.DEV,
 });
