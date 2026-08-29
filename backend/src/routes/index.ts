@@ -12,6 +12,7 @@ import { cartRoutes } from '../modules/cart/cart.routes';
 import { orderRoutes } from '../modules/orders/order.routes';
 import { invoiceRoutes } from '../modules/invoices/invoice.routes';
 import { returnRoutes } from '../modules/returns/return.routes';
+import { bespokeRoutes } from '../modules/bespoke/bespoke.routes';
 import { sendSuccess } from '../utils/response';
 
 const router = Router();
@@ -45,5 +46,6 @@ router.use('/cart', cartRoutes);
 router.use('/orders', orderRoutes);
 router.use('/invoices', invoiceRoutes);
 router.use('/returns', returnRoutes);
+router.use('/bespoke', bespokeRoutes);
 
 export const apiRouter = router;
