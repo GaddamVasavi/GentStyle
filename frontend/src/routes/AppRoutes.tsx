@@ -26,6 +26,10 @@ import { WarehouseInventoryPage } from '../pages/admin/WarehouseInventoryPage';
 import { PurchaseOrdersPage } from '../pages/admin/PurchaseOrdersPage';
 import { SupplierScorecardsPage } from '../pages/admin/SupplierScorecardsPage';
 import { LogisticsCarrierPage } from '../pages/admin/LogisticsCarrierPage';
+import { VIPClubPortalPage } from '../pages/customer/VIPClubPortalPage';
+import { AIStylistPage } from '../pages/customer/AIStylistPage';
+import { ExecutiveAnalyticsPage } from '../pages/admin/ExecutiveAnalyticsPage';
+import { Customer360Page } from '../pages/admin/Customer360Page';
 
 export const AppRoutes: React.FC = () => {
   return (
@@ -44,6 +48,8 @@ export const AppRoutes: React.FC = () => {
         <Route path="/bespoke" element={<BespokeCustomizerPage />} />
         <Route path="/bespoke/measurements" element={<MeasurementStudioPage />} />
         <Route path="/bespoke/appointments" element={<TailorFittingBookingPage />} />
+        <Route path="/vip-club" element={<VIPClubPortalPage />} />
+        <Route path="/ai-stylist" element={<AIStylistPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
@@ -56,6 +62,8 @@ export const AppRoutes: React.FC = () => {
           <Route path="wishlist" element={<WishlistPage />} />
           <Route path="orders" element={<OrdersPage />} />
           <Route path="orders/:id" element={<OrderDetailsPage />} />
+          <Route path="vip-concierge" element={<VIPClubPortalPage />} />
+          <Route path="ai-wardrobe" element={<AIStylistPage />} />
           <Route path="notifications" element={<div className="text-center py-12 text-gray-400">Notification center ready.</div>} />
         </Route>
       </Route>
@@ -64,7 +72,7 @@ export const AppRoutes: React.FC = () => {
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<Navigate to="/admin/dashboard" replace />} />
         <Route path="dashboard" element={<AdminDashboardPage />} />
-        <Route path="analytics" element={<div className="p-4 text-gray-300">Detailed analytics dashboard.</div>} />
+        <Route path="analytics" element={<ExecutiveAnalyticsPage />} />
         <Route path="orders" element={<div className="p-4 text-gray-300">Admin order management.</div>} />
         <Route path="products" element={<div className="p-4 text-gray-300">Catalog management.</div>} />
         <Route path="categories" element={<div className="p-4 text-gray-300">Category & brand taxonomy.</div>} />
@@ -72,7 +80,7 @@ export const AppRoutes: React.FC = () => {
         <Route path="procurement" element={<PurchaseOrdersPage />} />
         <Route path="suppliers" element={<SupplierScorecardsPage />} />
         <Route path="logistics" element={<LogisticsCarrierPage />} />
-        <Route path="customers" element={<div className="p-4 text-gray-300">Customer directory.</div>} />
+        <Route path="customers" element={<Customer360Page />} />
         <Route path="payments" element={<div className="p-4 text-gray-300">Transaction records.</div>} />
         <Route path="coupons" element={<div className="p-4 text-gray-300">Coupon campaigns.</div>} />
         <Route path="promotions" element={<div className="p-4 text-gray-300">Flash sales.</div>} />
