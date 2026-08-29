@@ -13,6 +13,9 @@ import { orderRoutes } from '../modules/orders/order.routes';
 import { invoiceRoutes } from '../modules/invoices/invoice.routes';
 import { returnRoutes } from '../modules/returns/return.routes';
 import { bespokeRoutes } from '../modules/bespoke/bespoke.routes';
+import { warehouseRoutes } from '../modules/warehouse/warehouse.routes';
+import { procurementRoutes } from '../modules/procurement/procurement.routes';
+import { logisticsRoutes } from '../modules/logistics/logistics.routes';
 import { sendSuccess } from '../utils/response';
 
 const router = Router();
@@ -47,5 +50,8 @@ router.use('/orders', orderRoutes);
 router.use('/invoices', invoiceRoutes);
 router.use('/returns', returnRoutes);
 router.use('/bespoke', bespokeRoutes);
+router.use('/warehouse', warehouseRoutes);
+router.use('/procurement', procurementRoutes);
+router.use('/logistics', logisticsRoutes);
 
 export const apiRouter = router;
