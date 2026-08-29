@@ -22,6 +22,10 @@ import { AdminDashboardPage } from '../pages/admin/AdminDashboardPage';
 import { BespokeCustomizerPage } from '../pages/bespoke/BespokeCustomizerPage';
 import { MeasurementStudioPage } from '../pages/bespoke/MeasurementStudioPage';
 import { TailorFittingBookingPage } from '../pages/bespoke/TailorFittingBookingPage';
+import { WarehouseInventoryPage } from '../pages/admin/WarehouseInventoryPage';
+import { PurchaseOrdersPage } from '../pages/admin/PurchaseOrdersPage';
+import { SupplierScorecardsPage } from '../pages/admin/SupplierScorecardsPage';
+import { LogisticsCarrierPage } from '../pages/admin/LogisticsCarrierPage';
 
 export const AppRoutes: React.FC = () => {
   return (
@@ -64,7 +68,10 @@ export const AppRoutes: React.FC = () => {
         <Route path="orders" element={<div className="p-4 text-gray-300">Admin order management.</div>} />
         <Route path="products" element={<div className="p-4 text-gray-300">Catalog management.</div>} />
         <Route path="categories" element={<div className="p-4 text-gray-300">Category & brand taxonomy.</div>} />
-        <Route path="inventory" element={<div className="p-4 text-gray-300">Stock & warehouse logistics.</div>} />
+        <Route path="inventory" element={<WarehouseInventoryPage />} />
+        <Route path="procurement" element={<PurchaseOrdersPage />} />
+        <Route path="suppliers" element={<SupplierScorecardsPage />} />
+        <Route path="logistics" element={<LogisticsCarrierPage />} />
         <Route path="customers" element={<div className="p-4 text-gray-300">Customer directory.</div>} />
         <Route path="payments" element={<div className="p-4 text-gray-300">Transaction records.</div>} />
         <Route path="coupons" element={<div className="p-4 text-gray-300">Coupon campaigns.</div>} />
