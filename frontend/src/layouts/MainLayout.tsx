@@ -3,16 +3,18 @@ import { Outlet } from 'react-router-dom';
 import { Navbar } from '../components/common/Navbar';
 import { Footer } from '../components/common/Footer';
 import { AuthModal } from '../components/auth/AuthModal';
+import { CartDrawer } from '../components/cart/CartDrawer';
 
 export const MainLayout: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-[#0b0d10] text-[#f5f0e9]">
+    <div className="min-h-screen flex flex-col bg-gentblack text-gray-100 font-sans selection:bg-gold-500 selection:text-gentblack">
       <Navbar />
       <main className="flex-grow">
         <Outlet />
       </main>
       <Footer />
       <AuthModal />
+      <CartDrawer />
     </div>
   );
 };

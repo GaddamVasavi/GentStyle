@@ -8,6 +8,10 @@ import { brandRoutes } from '../modules/brands/brand.routes';
 import { collectionRoutes } from '../modules/collections/collection.routes';
 import { inventoryRoutes } from '../modules/inventory/inventory.routes';
 import { wishlistRoutes } from '../modules/wishlist/wishlist.routes';
+import { cartRoutes } from '../modules/cart/cart.routes';
+import { orderRoutes } from '../modules/orders/order.routes';
+import { invoiceRoutes } from '../modules/invoices/invoice.routes';
+import { returnRoutes } from '../modules/returns/return.routes';
 import { sendSuccess } from '../utils/response';
 
 const router = Router();
@@ -37,5 +41,9 @@ router.use('/brands', brandRoutes);
 router.use('/collections', collectionRoutes);
 router.use('/inventory', inventoryRoutes);
 router.use('/wishlist', wishlistRoutes);
+router.use('/cart', cartRoutes);
+router.use('/orders', orderRoutes);
+router.use('/invoices', invoiceRoutes);
+router.use('/returns', returnRoutes);
 
 export const apiRouter = router;

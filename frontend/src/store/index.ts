@@ -3,6 +3,8 @@ import authReducer from './slices/authSlice';
 import uiReducer from './slices/uiSlice';
 import productReducer from './slices/productSlice';
 import wishlistReducer from './slices/wishlistSlice';
+import cartReducer from './slices/cartSlice';
+import orderReducer from './slices/orderSlice';
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +12,8 @@ export const store = configureStore({
     ui: uiReducer,
     products: productReducer,
     wishlist: wishlistReducer,
+    cart: cartReducer,
+    orders: orderReducer,
   },
   devTools: import.meta.env.DEV,
 });

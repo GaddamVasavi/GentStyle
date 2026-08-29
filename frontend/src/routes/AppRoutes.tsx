@@ -11,9 +11,13 @@ import { ShopPage } from '../pages/public/ShopPage';
 import { ProductDetailsPage } from '../pages/public/ProductDetailsPage';
 import { CategoriesPage } from '../pages/public/CategoriesPage';
 import { CollectionsPage } from '../pages/public/CollectionsPage';
+import { CartPage } from '../pages/public/CartPage';
+import { CheckoutPage } from '../pages/public/CheckoutPage';
 import { ProfilePage } from '../pages/customer/ProfilePage';
 import { AddressesPage } from '../pages/customer/AddressesPage';
 import { WishlistPage } from '../pages/customer/WishlistPage';
+import { OrdersPage } from '../pages/customer/OrdersPage';
+import { OrderDetailsPage } from '../pages/customer/OrderDetailsPage';
 import { AdminDashboardPage } from '../pages/admin/AdminDashboardPage';
 
 export const AppRoutes: React.FC = () => {
@@ -28,6 +32,8 @@ export const AppRoutes: React.FC = () => {
         <Route path="/categories/:slug" element={<ShopPage />} />
         <Route path="/collections" element={<CollectionsPage />} />
         <Route path="/collections/:slug" element={<ShopPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
@@ -38,13 +44,10 @@ export const AppRoutes: React.FC = () => {
           <Route path="profile" element={<ProfilePage />} />
           <Route path="addresses" element={<AddressesPage />} />
           <Route path="wishlist" element={<WishlistPage />} />
-          <Route path="orders" element={<div className="text-center py-12 text-gray-400">Order management will be active in Phase 4.</div>} />
+          <Route path="orders" element={<OrdersPage />} />
+          <Route path="orders/:id" element={<OrderDetailsPage />} />
           <Route path="notifications" element={<div className="text-center py-12 text-gray-400">Notification center ready.</div>} />
         </Route>
-
-        {/* Placeholder store routes */}
-        <Route path="/cart" element={<div className="py-20 text-center text-gray-400">Cart active in Phase 4.</div>} />
-        <Route path="/checkout" element={<div className="py-20 text-center text-gray-400">Checkout active in Phase 4.</div>} />
       </Route>
 
       {/* Protected Admin Executive Console */}
